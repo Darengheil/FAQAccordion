@@ -11,6 +11,7 @@ h1{
     color: hsl(238, 29%, 16%); 
     font-size: 30px;
     margin-left: 10px;
+    margin-bottom: 1em;
 }
 
 .container{
@@ -21,14 +22,11 @@ h1{
     left: 20%;
     padding: 60px;
     border-radius: 25px;
+    z-index: 5;
 }
 
 .content{
-    margin-right: 50px;
-}
-
-.mainimg{
-    margin-right: 50px;
+    margin-right: 2em;
 }
 
 .accordion{
@@ -75,8 +73,19 @@ h1{
     border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
-.accordionpart:last-of-type{    
-    border-bottom: none;
+.imagecontainer{
+    margin-right: 50px;
+}
+
+.mainimg{
+    z-index: 10;
+}
+
+.boximg{
+    position: fixed;
+    top: 44%;
+    left: 22%;
+    z-index: 999;
 }
 
 @media (max-width: 900px){

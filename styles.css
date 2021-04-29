@@ -9,14 +9,8 @@ body{
 
 h1{
     color: hsl(238, 29%, 16%); 
-}
-
-h3{
-    color: hsl(238, 29%, 16%);    
-}
-
-p{
-    color: hsl(240, 6%, 50%);
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .container{
@@ -24,21 +18,67 @@ p{
     position: absolute;
     background: white;
     top: 25%;
-    left: 15%;
+    left: 20%;
+    padding: 60px;
+    border-radius: 25px;
+}
+
+.content{
+    margin-right: 50px;
+}
+
+.mainimg{
+    margin-right: 50px;
+}
+
+.accordion{
+    width: 350px;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    text-align: left;
+    color: hsl(238, 29%, 16%);
 }
 
 .accordionpart{
+    margin-bottom: 2em;
+}
+
+.accordion:after {
+    content: url("./images/icon-arrow-down.svg");
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after{
+    transform: scaleY(-1);
+}
+
+.accordion:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+.active{
+    text-shadow:0px 0px 1px black;
+    border-bottom: none;
+}
+
+.panel{
+    line-height: 1.5;
+    width: 330px;
+    padding: 0 10px;
+    color: hsl(240, 6%, 50%);
     border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
-.accordiontitle{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.accordionpart:last-of-type{    
+    border-bottom: none;
 }
 
-.arrow{
-    height: 100%;
-    width: auto;
+@media (max-width: 900px){
+
 }

@@ -9,49 +9,65 @@
 </head>
 <body>
   <div class="container">
-    <img src="images/illustration-woman-online-desktop.svg">
+    <div class="mainimg">       
+      <img src="images/illustration-woman-online-desktop.svg">
+    </div>
     <div class="content">
       <h1>FAQ</h1>
-      <div class="accordion">
+      <div>
         <div class="accordionpart">
-          <div class="accordiontitle">
-            <h3>How many team members can I invite?</h3>
-            <img src="images/icon-arrow-down.svg" class="arrow">
+          <button class="accordion">How many team members can I invite?</button>
+          <div class="panel">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
           </div>
-          <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
-            team members for the Premium plan.</p>
         </div>
         <div class="accordionpart">
-          <div class="accordiontitle">
-            <h3>What is the maximum file upload size?</h3>
-            <img src="images/icon-arrow-down.svg" class="arrow">
+          <button class="accordion">What is the maximum file upload size?</button>
+          <div class="panel">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </div>
-          <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
         </div>
         <div class="accordionpart">
-          <div class="accordiontitle">
-            <h3>How do I reset my password?</h3>
-            <img src="images/icon-arrow-down.svg" class="arrow">
+          <button class="accordion">How do I reset my password?</button>
+          <div class="panel">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
           </div>
-          <p>Click “Forgot password” from the login page or “Change password” from your profile page.
-            A reset link will be emailed to you.</p>
         </div>
         <div class="accordionpart">
-          <div class="accordiontitle">
-            <h3>Can I cancel my subscription?</h3>
-            <img src="images/icon-arrow-down.svg" class="arrow">
+          <button class="accordion">Can I cancel my subscription?</button>
+          <div class="panel">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
           </div>
-          <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
         </div>
         <div class="accordionpart">
-          <div class="accordiontitle">
-            <h3>Do you provide additional support?</h3>
-            <img src="images/icon-arrow-down.svg" class="arrow">
+          <button class="accordion">Do you provide additional support?</button>
+          <div class="panel">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </div>
-          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+
 </body>
 </html>

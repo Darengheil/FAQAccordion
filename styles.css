@@ -20,30 +20,31 @@ h1{
     background: white;
     top: 25%;
     left: 20%;
-    padding: 60px;
+    padding: 3em;
     border-radius: 25px;
     z-index: 5;
 }
 
 .content{
-    margin-right: 2em;
+    margin-right: 3em;
 }
 
 .accordion{
-    width: 350px;
+    width: 100%;
     background-color: white;
     cursor: pointer;
     padding: 10px;
     padding-right: 10px;
     padding-bottom: 15px;
     border: none;
-    border-bottom: 1px solid hsl(240, 5%, 91%);
     text-align: left;
     color: hsl(238, 29%, 16%);
 }
 
 .accordionpart{
+    width: 350px;
     margin-bottom: 2em;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
 .accordion:after {
@@ -67,27 +68,37 @@ h1{
 
 .panel{
     line-height: 1.5;
-    width: 330px;
     padding: 0 10px;
     color: hsl(240, 6%, 50%);
-    border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
 .imagecontainer{
-    margin-right: 50px;
-}
-
-.mainimg{
-    z-index: 10;
-}
-
-.boximg{
-    position: fixed;
-    top: 44%;
-    left: 22%;
-    z-index: 999;
+    margin-right: 3em;
 }
 
 @media (max-width: 900px){
-
+    .container{
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        width: 90%;
+        margin: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    .accordionpart{
+        width: 100%;
+    }
+    .accordion:hover{
+        color: black;
+    }
+    .content{
+        margin-right: 0;
+    }
+    .imagecontainer{
+        align-self: center;
+    }
 }
